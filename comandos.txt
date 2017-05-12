@@ -1,0 +1,33 @@
+mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=io.gumga  -DarchetypeArtifactId=gumga-archetype -DarchetypeVersion=LATEST -DgroupId=br.com.portolan.biblioteca  -DartifactId=biblioteca -Dversion=0.1-SNAPSHOT
+
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Autor  -Datributos="nome:String,sobrenome:String"
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Editora  -Datributos="nome:String"
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Assunto  -Datributos="nome:String,descricao:String"
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Livro  -Datributos="nome:String,assuntos:Set<Assunto>:@ManyToMany,autores:Set<Autor>:@OneToMany,editora:Editora:@ManyToOne"
+
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Autor  
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Editora  
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Assunto  
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Livro  
+
+cd ..
+cd biblioteca-api
+
+mvn io.gumga:gumgag:api -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Autor  
+mvn io.gumga:gumgag:api -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Editora  
+mvn io.gumga:gumgag:api -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Assunto  
+mvn io.gumga:gumgag:api -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Livro  
+
+cd ..
+cd biblioteca-presentation
+
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Autor  
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Editora  
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Assunto  
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Livro  
+
+
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Autor -Doverride=true 
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Editora -Doverride=true  
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Assunto -Doverride=true 
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.portolan.biblioteca.biblioteca.domain.model.Livro -Doverride=true  

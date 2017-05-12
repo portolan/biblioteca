@@ -1,0 +1,112 @@
+{
+  "coisa": {
+    "title": "Coisa"
+  ,"menulabel": "Coisa "
+  ,"id": "Identificador"
+  ,"descricao": "Descrição"
+  ,"valor": "Valor"
+  ,"ativo": "Ativo"
+  ,"new": "Novo"
+  ,"base": "Coisa"
+  ,"list": "Listar Coisa"
+  ,"edit": "Editar Coisa"
+  ,"insert": "Inserir Coisa"
+  }
+    ,"autor":{
+        "title":"Autor"
+        ,"menulabel": "Autor"
+        ,"edit": "Editar Autor"
+        ,"insert": "Inserir Autor"
+        ,"list": "Consulta Autor"
+        ,"id": "id"
+        ,"nome":"Nome"
+        ,"sobrenome":"Sobrenome"
+    }
+
+    ,"editora":{
+        "title":"Editora"
+        ,"menulabel": "Editora"
+        ,"edit": "Editar Editora"
+        ,"insert": "Inserir Editora"
+        ,"list": "Consulta Editora"
+        ,"id": "id"
+        ,"nome":"Nome"
+    }
+
+    ,"assunto":{
+        "title":"Assunto"
+        ,"menulabel": "Assunto"
+        ,"edit": "Editar Assunto"
+        ,"insert": "Inserir Assunto"
+        ,"list": "Consulta Assunto"
+        ,"id": "id"
+        ,"nome":"Nome"
+        ,"descricao":"Descricao"
+    }
+
+    ,"livro":{
+        "title":"Livro"
+        ,"menulabel": "Livro"
+        ,"edit": "Editar Livro"
+        ,"insert": "Inserir Livro"
+        ,"list": "Consulta Livro"
+        ,"id": "id"
+        ,"nome":"Nome"
+        ,"assuntos":"Assuntos"
+        ,"autores":"Autores"
+        ,"editora":"Editora"
+    }
+
+,"address": {
+  "cep": "CEP"
+,"numero": "Número"
+,"bairro":"Bairro"
+,"uf":"Estado"
+,"pais": "País"
+,"complemento": "Complemento"
+,"logradouro": "Logradouro"
+,"tipologradouro": "Tipo de Logradouro"
+,"localidade": "Localização"
+}
+,"formbuttons": {
+  "inserir": "Continuar inserindo"
+}
+,"table": {
+  "select": "Selecionar Todos",
+  "clean": "Limpar pesquisa"
+}
+, "advanced": {
+  "gt": "maior que"
+,"ge": "maior igual"
+,"lt": "menor que"
+,"le": "menor igual"
+,"eq": "igual "
+,"ne": "diferente de"
+,"in": "faz parte de"
+,"not_in": "não faz parte de"
+,"contains": "contém"
+,"starts_with": "começa com"
+,"ends_with": "termina com"
+,"not_contains": "não contém"
+},
+  "general":{
+    "coisa": "Coisa Base",
+    "forgot": "Esqueceu sua Senha?"
+  },
+  "welcome":{
+     "menulabel": "Welcome"
+   },
+   "home": {
+  "menulabel": "Início"
+},
+"gumgatagdefinition":{
+    "name":"Nome"
+    ,"menuLabel": "Tags"
+},
+"configuration": {
+  "menulabel": "Configurações",
+  "gumgatagdefinition": "Tags",
+  "gumgacustomfield": "Atributos Genéricos"
+}
+
+}

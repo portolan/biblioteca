@@ -1,0 +1,65 @@
+<form name="LivroForm" gumga-form novalidate>
+		
+	<div gumga-form-class="nome">
+		<label gumga-translate-tag="livro.nome">nome</label>
+		<input gumga-error type="text" name="nome" ng-model="livro.data.nome"  class="form-control" />
+	</div>		
+
+    <div class="col-md-6">
+        <label for="assuntos" gumga-translate-tag="assunto.title"></label>
+    </div>
+    
+    <div class="col-md-6">
+        <label for="livro.assuntos" gumga-translate-tag="livro.assuntos"></label>
+    </div>
+
+	<div class="full-width-without-padding">
+	    <gumga-many-to-many 
+	            left-list="assunto.data" 
+	            right-list="livro.data.assuntos" 
+	            left-search="assunto.methods.asyncSearch('nome', param)"
+	            filter-parameters="nome"
+	            post-method="assunto.methods.save(value)"
+	            authorize-add="true">
+	        <left-field>{{$value.nome}}</left-field>
+	        <right-field>{{$value.nome}}</right-field>
+	    </gumga-many-to-many>
+	</div>
+	
+		
+
+	<div class="full-width-without-padding">
+	    <label for="autores" gumga-translate-tag="livro.autores"></label>
+	
+		<gumga-one-to-many
+		        children="livro.data.autores"
+		        template-url="app/modules/livro/views/modalAutor.html"
+		        displayable-property="nome"
+		        controller="ModalAutorController">
+		</gumga-one-to-many>
+	</div>
+		
+
+	<div gumga-form-class="editora">
+		<label gumga-translate-tag="livro.editora">editora</label>
+	    <gumga-many-to-one
+	            name="editora"
+	            value="livro.data.editora"
+	            search-method="editora.methods.asyncSearch('nome', param)"
+	            field="nome"
+	            authorize-add="false"
+              display-info="false"
+	            post-method="editora.methods.asyncPost(value, 'nome')">
+	    </gumga-many-to-one>
+	</div>
+
+    <gumga-errors label="Lista de erros" title="Lista de erros"></gumga-errors>
+    <gumga-form-buttons
+            back="livro.list"
+            submit="livro.methods.put(livro.data)"
+            position="right"
+            valid="LivroForm.$valid"
+            confirm-dirty="true"
+            continue="continue">
+    </gumga-form-buttons>    
+</form>

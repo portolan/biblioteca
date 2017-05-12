@@ -1,0 +1,80 @@
+    [
+{
+        "label": "Livro",
+        "state": "livro.list",
+        "key": "CRUD-Livro",
+        "icon": "glyphicon glyphicon-user",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "children": [{             
+             "label": " Inserir ",
+             "state": "livro.insert",
+             "key": "CRUD-Livro",
+             "icon": "glyphicon glyphicon-user"             
+             }
+         ]
+    },        {
+        "label": "Assunto",        
+        "state": "assunto.list",
+        "key": "CRUD-Assunto",
+        "icon": "glyphicon glyphicon-user",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "children": [{
+            "label": " Inserir ",
+            "state": "assunto.insert",            
+            "key": "CRUD-Assunto",
+            "icon": "glyphicon glyphicon-user"
+
+        }]
+    },
+    {
+        "label": "Editora",
+        "state": "editora.list",
+        "key": "CRUD-Editora",
+        "icon": "glyphicon glyphicon-user",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "children": [{
+            "label": " Inserir ",
+            "URL": "editora.insert",
+            "key": "CRUD-Editora",
+            "icon": "glyphicon glyphicon-user"
+            
+        }]
+    },
+    {
+        "type": "item",
+        "label": "Welcome",
+        "state": "welcome.home",
+        "icon": "home",
+        "key": "CRUD-BASE"
+    },
+    {
+        "type": "item",
+        "label": "Configurations",
+        "icon": "settings",
+        "key": "CONFIGURATION",
+        "children": [{
+                "type": "item",
+                "label": "Custom Fields",
+                "key": "CUSTOMFIELDS",
+                "state": "gumgacustomfield.list",
+                "icon": "text_fields"
+            },
+            {
+                "type": "item",
+                "label": "Tags",
+                "key": "TAGS",
+                "state": "gumgatagdefinition.list",
+                "icon": "label"
+            }
+        ]
+    }
+]

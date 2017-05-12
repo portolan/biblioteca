@@ -1,0 +1,41 @@
+	<div class="row">
+	
+	    <div class="col-md-5">
+	      <a ui-sref="assunto.insert" class="btn btn-primary">
+	        <i class="glyphicon glyphicon-plus"></i>Novo
+	      </a>
+	
+	      <button type="button" class="btn btn-danger" ng-click="assunto.methods.delete(selectedValues)" gumga-confirm="Deseja remover?">
+	        <i class="glyphicon glyphicon-trash"></i>Remover
+	      </button>
+	    </div>
+	
+	    <div class="col-md-7">
+	        <gumga-query search="assunto.methods.search(field,param)" advanced-search="assunto.methods.advancedSearch(param)" saved-filters="assunto.methods.getQuery(page)">
+	            <search-field label="nome" field="nome"></search-field>
+	            <search-field label="descricao" field="descricao"></search-field>
+	            <advanced-search-field  type="string"  label="nome" field="nome"></advanced-search-field>
+	            <advanced-search-field  type="string"  label="descricao" field="descricao"></advanced-search-field>
+	        </gumga-query>
+	    </div>
+	</div>
+	
+	<div class="full-width-without-padding">
+	    <gumga-list sort="assunto.methods.sort(field, dir)"
+	           class="table-striped table-condensed"
+	            data="assunto.data"
+	            configuration="tableConfig">
+	    </gumga-list>
+	</div>
+
+	<uib-pagination ng-model="page"
+	            max-size="10"
+	            boundary-links="true"
+	            previous-text="‹"
+	            next-Text="›"
+	            first-text="«"
+	            last-text="»"
+	            items-per-page="assunto.pageSize"
+	            total-items="assunto.count"
+	            ng-change="assunto.methods.get(page)">
+	</uib-pagination>

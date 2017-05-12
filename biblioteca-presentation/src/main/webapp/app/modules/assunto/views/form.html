@@ -1,0 +1,19 @@
+<form name="AssuntoForm" gumga-form novalidate>
+		
+	<div gumga-form-class="nome">
+		<label gumga-translate-tag="assunto.nome">nome</label>
+		<input gumga-error type="text" name="nome" ng-model="assunto.data.nome"  class="form-control" />
+	</div>		
+	<div gumga-form-class="descricao">
+		<label gumga-translate-tag="assunto.descricao">descricao</label>
+		<input gumga-error type="text" name="descricao" ng-model="assunto.data.descricao"  class="form-control" />
+	</div>    <gumga-errors label="Lista de erros" title="Lista de erros"></gumga-errors>
+    <gumga-form-buttons
+            back="assunto.list"
+            submit="assunto.methods.put(assunto.data)"
+            position="right"
+            valid="AssuntoForm.$valid"
+            confirm-dirty="true"
+            continue="continue">
+    </gumga-form-buttons>    
+</form>
